@@ -1,9 +1,10 @@
-from router import app
+from backend.router import app
+from backend import constants
+
 from flask import Flask, flash, request, redirect, url_for
-from werkzeug import secure_filename
+from werkzeug.utils import secure_filename
+from PIL import Image
 import os
-import constants
-import Image
 
 @app.route('/admin', methods=['POST'])
 def upload_file():
