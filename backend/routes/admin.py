@@ -5,9 +5,6 @@ import os
 import constants
 import Image
 
-def filter_valid_files(files):
-    return [x for x in files if "." in x and x.rsplit(".", 1)[1].upper() in constants.ALLOWED_FILES]
-
 @app.route('/admin', methods=['POST'])
 def upload_file():
     files = request.files.getlist("file")
