@@ -16,7 +16,7 @@ def get_all_photos():
     for photo_from_db in photos_from_db:
         photos.append(_photo_from_db_to_photo(photo_from_db))
 
-    photos_from_db.sort(key=lambda x: x.insert_date, reverse=True)
+    photos.sort(key=lambda x: x.insert_date, reverse=True)
     return photos
 
 def get_photo(id):
